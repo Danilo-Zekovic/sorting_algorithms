@@ -12,6 +12,9 @@ function CArray(numElements) {
   this.insertionSort = insertionSort;
   this.shellsort = shellsort;
   this.shellsort2 = shellsort2;
+  this.mergeSort = mergeSort;
+  this.mergeArrays = mergeArrays;
+  this.qSort = qSort;
   for (var i = 0; i < numElements; ++i) {
     this.dataStore[i] = i;
   }
@@ -179,3 +182,21 @@ function mergeArrays(arr, startLeft, stopLeft, startRight, stopRight) {
   print("right array - ", rightArr);
 }
 
+/* Quick Sort */
+function qSort() {
+ if (this.length == 0) {
+   return [];
+ }
+ var lesser = [];
+ var greater = [];
+ var pivot = this[0];
+ for (var i = 1; i < this.length; i++) {
+   if (this[i] < pivot) {
+     lesser.push(this[i]);
+   } 
+   else {
+     greater.push(this[i]);
+   }
+ }
+ return qSort(lesser).concat(pivot, qSort(greater));
+}
