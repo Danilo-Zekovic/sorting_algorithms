@@ -21,4 +21,5 @@ d8 shellsortTest.js     shell sort
 d8 shellsort2Test.js    shell2 sort
 d8 ss.js                selection sort
 d8 tb.js                just to test testBed and generation random numbers
-d8 timing.js               calculates the time needed to execute
+d8 timing.js            calculates the time needed to execute
+d8 qs.js                quick sort both function and test print
